@@ -26,7 +26,7 @@ const nextConfig = {
                 {
                   name: "preset-default",
                   params: {
-                    overrides: {
+                    overrides: {   
                       removeViewBox: false,
                     },
                   },
