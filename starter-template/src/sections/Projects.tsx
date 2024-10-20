@@ -42,5 +42,38 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  return <div>Projects Section</div>;
+  return (
+  <div>
+    <div className="container">
+      <div className="flex justify-center">
+      <p className="uppercase font-semibold trackimg-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent"> Real-word Results
+
+      </p>
+      </div>
+      <h2 className="font-serif text-3xl text-center mt-6">Featured projects</h2>
+      <p className="text-center text-white/60 mt-4"> see how i transformed concepts into engaging digital experience.</p>
+      <div className="flex flex-col mt-10">
+        {portfolioProjects.map((project) =>(
+          <div key={project.title} className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:-z-10 after:content-['']after:absolute after:inset-0 after:outline-2 after:outline afteroutline-offset-2 after:rounded-3xl">
+        <div>
+          <span>{project.company}</span>
+          <span>{project.year}</span>
+          </div>
+          <h3>{project.title}</h3>
+          <ul>
+            {project.results.map((result) =>(
+              <li>{result.title}</li>
+            ))}
+            </ul>
+            <a href={project.link}>
+              <button>view live site</button>
+            </a>
+            <image src={project.image} alt={project.title}/>
+           </div>
+           )) }
+           </div>
+             </div>
+
+  </div>
+  );
 };
