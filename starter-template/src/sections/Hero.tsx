@@ -2,21 +2,23 @@ import memojiImage from '@/assets/images/memoji-computer.png';
 import Image from "next/image";
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import grainImage from "/assets/images/grain.jpg";
-import starIcon from '@/assets/icons/star.svg';
+
 
 export const HeroSection = () => {
   return(
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       <div className='absolute inset-0 -z-30 opacity-5'
        style={{
-        backgroundImage: 'url(${grainImage.src',
-      }}></div>
+        backgroundImage: `url(${grainImage.src})`,}}
+        ></div>
       <div className=' size-[850px] hero-ring'></div>
       <div className=' size-[1020px] hero-ring'></div>
       <div className=' size-[1220px] hero-ring'></div>
       <div className=' size-[1420px] hero-ring'></div>
       <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border border-red-500'>
+        <StarIcon />
       </div>
+      
 
       <div className="cotainer">
         <div className="flex flex-col items-center">
