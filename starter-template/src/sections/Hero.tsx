@@ -16,7 +16,7 @@ export const HeroSection = () => {
       <div className=' size-[1020px] hero-ring'></div>
       <div className=' size-[1220px] hero-ring'></div>
       <div className=' size-[1420px] hero-ring'></div>
-      <HeroOrbit size={800}>
+      <HeroOrbit size={800} rotation={72}>
       <StarIcon className=" size-28 text-emerld-300"/>
       </HeroOrbit>
       <div className="cotainer">
