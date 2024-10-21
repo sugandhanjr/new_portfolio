@@ -38,5 +38,22 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return <div>
+    <p> Happy Clients</p>
+    <h2> What Clients Say Abour Me</h2>
+    <p>"Empowering innovation through expertise and dedication."
+    </p>
+    <div>
+      {testimonials.map(testimonial => (
+        <div key={testimonial.name}>
+          <image src={testimonial.avatar} alt={testimonial.name }/>
+          <div>{ testimonial.name}</div>
+          <div>{ testimonial.position}</div>
+          <p> {testimonial.text}</p>
+          </div>
+
+      ))}
+    </div>
+  </div>;
 };
+ 
