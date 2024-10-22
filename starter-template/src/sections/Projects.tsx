@@ -7,7 +7,6 @@ import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import grainImage from '@/assets/images/grain.jpg';
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import Link from "next/link";
 
 const portfolioProjects = [
   {
@@ -77,7 +76,7 @@ export const ProjectsSection = () => {
               </li>
             ))}
             </ul>
-            <Link href={project.link} target="_blank" rel="noopener noreferrer">dsdfsf</Link>
+            <a href={project.link} target="_blank" rel="noopener noreferrer"></a>
             <a href={project.link} target="_blank" rel="noopener noreferrer">
   <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
     <span>Visit live site </span>
