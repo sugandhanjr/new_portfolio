@@ -5,6 +5,9 @@ import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import { SectionHeader } from "@/components/SectionHeader";
 import Image from "next/image";
+import grainImage from "@/assets/images/grain.jpg"
+import { Card } from "@/components/Card";
+import test from "node:test";
 
 const testimonials = [
   {
@@ -40,21 +43,31 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div className="py-16">
-    <div className="container">
-    <SectionHeader eyebrow="Happy Clients" title="What Clients Say Abour Me" description="Empowering innovation through expertise and dedication"/>
-    <div>
-      {testimonials.map(testimonial => (
-        <div key={testimonial.name} className="bg-gray-800 rounded-3xl">
-          <Image src={testimonial.avatar} alt={testimonial.name }/>
-          <div>{ testimonial.name}</div>
-          <div>{ testimonial.position}</div>
-          <p> {testimonial.text}</p>
-          </div>
-
-      ))}
+  return (
+    <div className="py-16">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Happy Clients"
+          title="What Clients Say About Me"
+          description="Empowering innovation through expertise and dedication"
+        />
+        <div>
+          {testimonials.map((testimonial, index) => (
+            <Card key={testimonial.name}>
+              <div className="flex">
+              <Image
+                src={testimonial.avatar}
+                alt={testimonial.name}/>
+                <div>
+              <div>{testimonial.name}</div>
+              <div>{testimonial.position}</div>
+              </div>
+              </div> 
+              <p>{testimonial.text}</p>
+              </Card>
+          ))}
+        </div>
+      </div>
     </div>
-    </div>
-  </div>
+  );
 };
- 
