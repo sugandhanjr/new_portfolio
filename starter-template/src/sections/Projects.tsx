@@ -7,6 +7,7 @@ import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import grainImage from '@/assets/images/grain.jpg';
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+import Link from "next/link";
 
 const portfolioProjects = [
   {
@@ -76,12 +77,14 @@ export const ProjectsSection = () => {
               </li>
             ))}
             </ul>
-            <a href={project.link}>
-              <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                <span>visit live site</span>
-                <ArrowUpRightIcon className="size-4"/>
-                </button>
-            </a>
+            <Link href={project.link} target="_blank" rel="noopener noreferrer">dsdfsf</Link>
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+  <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+    <span>Visit live site </span>
+    <ArrowUpRightIcon className="size-4" />
+  </button>
+</a>
+
             </div>
             <div className="relative">
             <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"/>
