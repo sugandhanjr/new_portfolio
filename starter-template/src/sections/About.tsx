@@ -12,7 +12,8 @@ import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from '@/assets/images/map.png';
 import SmileMemoji from "@/assets/images/memoji-smile.png";
-import { title } from "node:process";
+import { CardHeader } from "@/components/CardHeader";
+import { ToolboxItems } from "@/components/Toolboxitems";
 
 const toolboxItems =[
   {
@@ -73,50 +74,32 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className="pb-96">
+    <div className="py-16">
+      <div className="container">
       <SectionHeader
         eyebrow="About Me"
         title="A Glimpse Into My World"
         description="Learn more about who I am, what I do, and what inspires me" // Fixed spacing and typos
       />
-      <div>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>My Reads</h3>
-            <p>Explore the books shaping my perspectives.</p>
+      <div className="mt-20">
+        <Card className="h-[320px]">
+          <CardHeader 
+          title="My Reads"
+          description="Explore the books shaping my perspectives"/>
+          <div className="w-40 mx-auto mt-8">
+            <Image src={bookImage} alt="Book cover"/>
           </div>
-          <Image src={bookImage} alt="Book cover" />
+        </Card >
+        <Card>
+        <CardHeader 
+          title="My Toolbox<"
+          description="Explore the technologies and tools I use to craft exceptional digital experiences."/>
+          <ToolboxItems items={toolboxItems}/>
         </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>My Toolbox</h3>
-            <p>Explore the technologies and tools I use to craft exceptional digital experiences.</p>
-          </div>
-          <div>
-            {toolboxItems.map((item) => (
-              <div key={item.title}>
-                <TechIcon component={item.iconType} /> {/* Pass the icon reference here */}
-                <span>{item.title}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>My Reads</h3>
-            <p>Explore the books shaping my perspectives.</p>
-          </div>
-          <Image src={bookImage} alt="Book cover" />
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>Beyond the Code</h3>
-            <p> Explore my interests and hobbis beyond the digital realm</p>
-          </div>
+        <Card> 
+        <CardHeader 
+          title="Beyond the Code"
+          description="Explore my interests and hobbis beyond the digital realm."/>   
           <div>{hobbies.map((hobby) => (
             <div key={hobby.title}>
               <span>{hobby.title}</span>
@@ -131,5 +114,7 @@ export const AboutSection = () => {
         </Card>
       </div>
     </div>
+    </div>
   );
 };
+
