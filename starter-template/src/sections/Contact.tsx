@@ -2,14 +2,14 @@ import ArrowRightIcon from "@/assets/icons/arrow-up-right.svg";
 
 export const ContactSection = () => {
   return (
-  <div className="py-16"> 
+  <div className="py-16 pt-14"> 
     <div className="container">
-      <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center">
+      <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center relative">
     <h2 className="font-serif text-2xl"> Let's create something amazing together</h2>
-    <p> Ready to bring your next project to life? let's connect and discuss how I can help you to achive your goals</p>
-    <button>
-      <span> Contact Me</span>
-      <ArrowRightIcon/>
+    <p className="text-sm mt-2"> Ready to bring your next project to life? let's connect and discuss how I can help you to achive your goals</p>
+    <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 mt-8">
+      <span className="font-semibold"> Contact Me</span>
+      <ArrowRightIcon className="size-4"/>
     </button>
   </div>
   </div>
