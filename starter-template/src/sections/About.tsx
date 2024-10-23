@@ -12,6 +12,7 @@ import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from '@/assets/images/map.png';
 import SmileMemoji from "@/assets/images/memoji-smile.png";
+import { title } from "node:process";
 
 const toolboxItems =[
   {
@@ -39,6 +40,36 @@ const toolboxItems =[
     iconType: GithubIcon
   },
 ];
+const hobbies = [
+  {
+    title: 'Painting',
+    emoji: '🎨'
+  },
+  {
+    title: 'Photography',
+    emoji: '📷'
+  },
+  {
+    title: 'Gaming',
+    emoji: '🎮'
+  },
+  {
+    title: 'Hiking',
+    emoji: '🥾'
+  },
+  {
+    title: 'Music',
+    emoji: '🎵'
+  },
+  {
+    title: 'Fitness',
+    emoji: '🏋️'
+  },
+  {
+    title: 'Reading',
+    emoji: '📚'
+  },
+]
 
 export const AboutSection = () => {
   return (
@@ -86,9 +117,17 @@ export const AboutSection = () => {
             <h3>Beyond the Code</h3>
             <p> Explore my interests and hobbis beyond the digital realm</p>
           </div>
+          <div>{hobbies.map((hobby) => (
+            <div key={hobby.title}>
+              <span>{hobby.title}</span>
+              <span>{hobby.emoji}</span>
+              </div>))}
+
+          </div>
         </Card>
         <Card>
           <Image src={mapImage} alt="map"/>
+          <Image src={SmileMemoji} alt="smiling memoji"/>
         </Card>
       </div>
     </div>
