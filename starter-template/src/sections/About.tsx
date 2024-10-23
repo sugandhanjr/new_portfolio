@@ -90,11 +90,15 @@ export const AboutSection = () => {
             <Image src={bookImage} alt="Book cover"/>
           </div>
         </Card >
-        <Card>
+        <Card className="h-[320px] p-0 ">
         <CardHeader 
           title="My Toolbox<"
-          description="Explore the technologies and tools I use to craft exceptional digital experiences."/>
-          <ToolboxItems items={toolboxItems}/>
+          description="Explore the technologies and tools I use to craft exceptional digital experiences."
+          className="px-6 pt-6"
+          />
+          <ToolboxItems items={toolboxItems} className="mt-6"/>
+          <ToolboxItems items={toolboxItems} className="mt-6  "/>
+
         </Card>
         <Card> 
         <CardHeader 
