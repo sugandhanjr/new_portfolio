@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { TechIcon } from "./TechIcon";
+import { Fragment } from "react";
 
 export const ToolboxItems = ({
   items,
@@ -20,8 +21,9 @@ export const ToolboxItems = ({
         className
       )}
     >
-      {[...new A]}
-      <div className={twMerge("flex flex-none py-0.5 gap-6 pr-6",
+      {[...new Array(2)].fill(0).map((_,index) => (
+        <Fragment key={index}>
+ <div className={twMerge("flex flex-none py-0.5 gap-6 pr-6",
         itemsWrapperClassName)}>
       {items.map((item) => (
         <div
@@ -33,6 +35,11 @@ export const ToolboxItems = ({
         </div>
       ))}
     </div>
+
+          </Fragment>
+
+      ))}
+     
     </div> 
   );
 };
