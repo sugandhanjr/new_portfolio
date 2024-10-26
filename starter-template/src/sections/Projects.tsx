@@ -53,9 +53,12 @@ export const ProjectsSection = () => {
     <div className="container">
     <SectionHeader eyebrow="Real-word Results" title="Featured projects" description="see how i transformed concepts into engaging digital experience"/>
       <div className="mt-10 md:mt-20 flex flex-col gap-20">
-        {portfolioProjects.map((project) =>(
+        {portfolioProjects.map((project,projectIndex) =>(
           <Card 
-          key={project.title} className="px-8 pt-8 pb-0  md:pt-12 md:px-10lg:pt-16 lg:px-20  ">
+          key={project.title} className="px-8 pt-8 pb-0  md:pt-12 md:px-10lg:pt-16 lg:px-20  sticky "
+          style={{
+            top:'calc(64px + ${projectIndex * 40 }px'
+          }}>
             
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
               <div className="lg:pb-16">
